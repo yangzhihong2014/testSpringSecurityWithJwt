@@ -29,6 +29,8 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        // 这里的token 可以给前台一个随机数，真正的token 是存在数据库中的或是缓存中，
+        // 通过前台传入的随机数 来寻找真正的token
         String token = request.getHeader("token");
         if(token != null ){
             String username = JwtTokenUtils.getUsernameFromToken(token);
