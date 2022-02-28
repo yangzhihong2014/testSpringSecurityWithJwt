@@ -1,0 +1,27 @@
+POST http://localhost:8585/auth/login
+Content-Type: application/json
+
+{
+  "username": "yang",
+  "password": "1231"
+}
+
+###
+POST http://localhost:8585/auth/refresh
+Content-Type: application/json
+token:eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6aGFuZ3NhbiIsImV4cCI6MTY0NjA4MDA5Nn0.6ebSJmazKHEkYzkIVj2LTNku62rdpEQj_bt3jeDtNtCT75eJtiaJ2pVPmGuN_BVuLzPqh24-QNFGPEJXl67Urw
+
+
+###
+POST http://localhost:8585/data/list
+Content-Type: application/json
+token:eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ5YW5nIiwiZXhwIjoxNjQ2MDgwMjA5fQ.uBAFxoQrZ3xq73KHCUK689NU0UgXq6Xqov7K7qH-pg_2nm8TbfIcH--nGhfLhUpX5Y5bWZmML19LUSWmPuGoVg
+
+###
+POST http://localhost:8585/data/findByName
+Content-Type: application/json
+token:eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ5YW5nIiwiZXhwIjoxNjQ2MDgwMjA5fQ.uBAFxoQrZ3xq73KHCUK689NU0UgXq6Xqov7K7qH-pg_2nm8TbfIcH--nGhfLhUpX5Y5bWZmML19LUSWmPuGoVg
+
+{
+  "username": "zhangsan"
+}
